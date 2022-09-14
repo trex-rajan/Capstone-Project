@@ -30,7 +30,8 @@
 
 ```bash
 #!/bin/bash
-
+# A bash script
+# Start
 read -p 'What is your name?: ' name # asks for a user input from a user
 read -p 'Please enter your section name of CSN400: ' section # asks user for their CSN400 section
 
