@@ -1,7 +1,7 @@
 # Pre-Checkpoint1 Submission
 
 - **COURSE INFORMATION📋: CSN400(Computer Systems Project)**
-- **STUDENT’S NAME👦: Keshav Raj Ghimire**
+- **STUDENT’S NAME :student: : Keshav Raj Ghimire**
 - **STUDENT'S NUMBER🔢: 162575195**
 - **GITHUB USER_ID🆔: myseneca-162575195**
 - **TEACHER’S NAME👩‍🏫: Atoosa Nasiri**
