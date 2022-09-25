@@ -1,0 +1,77 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "routeTables_RT_52_name": {
+            "defaultValue": "RT-52",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/routeTables",
+            "apiVersion": "2020-11-01",
+            "name": "[parameters('routeTables_RT_52_name')]",
+            "location": "canadaeast",
+            "tags": {
+                "DeploymentId": "734707",
+                "LaunchId": "26159",
+                "LaunchType": "ON_DEMAND_LAB",
+                "TemplateId": "4678",
+                "TenantId": "353"
+            },
+            "properties": {
+                "disableBgpRoutePropagation": true,
+                "routes": [
+                    {
+                        "name": "Route_Student-to-Server",
+                        "properties": {
+                            "addressPrefix": "172.17.52.32/27",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIpAddress": "192.168.52.36",
+                            "hasBgpOverride": false
+                        }
+                    },
+                    {
+                        "name": "Route_Server-to-Student",
+                        "properties": {
+                            "addressPrefix": "10.11.119.0/24",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIpAddress": "192.168.52.36",
+                            "hasBgpOverride": false
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('routeTables_RT_52_name'), '/Route_Server-to-Student')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_RT_52_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "10.11.119.0/24",
+                "nextHopType": "VirtualAppliance",
+                "nextHopIpAddress": "192.168.52.36",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('routeTables_RT_52_name'), '/Route_Student-to-Server')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_RT_52_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "172.17.52.32/27",
+                "nextHopType": "VirtualAppliance",
+                "nextHopIpAddress": "192.168.52.36",
+                "hasBgpOverride": false
+            }
+        }
+    ]
+}
