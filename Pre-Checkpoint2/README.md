@@ -63,4 +63,26 @@
   
    i. Navigate to Networking Pane of LS-52> Clikc on "Network Interface" > Got to "IP configurations" > Enable IP forwarding.
    
-   ii. I have also edited /etc/sysctl.conf and added `net.ipv4.ip_forward = 1` to allow our traffic through Router
+   ii. I have also edited /etc/sysctl.conf in LR-52 and added `net.ipv4.ip_forward = 1` to allow our traffic through Router. 
+   iii. We have to enable the install the iptables rules and disable the firewall services in Linux Router to establish the connectivity. Commands: `systemctl stop firewalld` , `systemctl disable firewalld` and `systemctl status firewalld` .
+
+
+### Demostration of connectivity
+
+I would use combination of Screenshots and a link to Pcap.file which you can download to see the connectivity between all my VMs.
+
+1. SSH Connection from WC-52 to LR-52
+   ![Screenshot not found](./screenshots%20for%20demonstration/WC-LR.jpg)
+
+2. SSH Connection from WC-52 to LS-52
+   ![Screenshot not found!](./screenshots%20for%20demonstration/WC-LS.jpg)
+
+3. RDP Connection from WC-52 to WS-52
+   ![Screenshot not found!](./screenshots%20for%20demonstration/WC-WS.jpg)
+
+   ***Note:*** Please click the link to download the filtered wireshark capture (.pcap) file to see the packet traffic during the connection: 
+    [Wireshark Capture for people of seneca college](https://seneca-my.sharepoint.com/:u:/g/personal/krghimire_myseneca_ca/EfbUeLYNj6pEld5Z89Zh0nMBui9h2sULzY-iezDdmkUZuA?e=vzOyGe)
+
+### Conclusion
+
+    * From this lesson, I have know learned how we can do port forwarding to access our lab environment using Port Forwarding making Linux VM act as a Router. This was great learning experience in terms of setup and configuration of DevTestLab. It is a great piece of knowledge. Making VMs inside the DevTestLab is so easy and fast.
