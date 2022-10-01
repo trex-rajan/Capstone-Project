@@ -52,4 +52,15 @@
   
 1. Follow the same steps to Create LS-52 and make this minor but ###VERY IMPORTANT ### changes:
    * Name: WS-52
-   * VNET: Server - 52
+   * VNET: Server - 52 
+
+### Basic Connectivity between all machines
+
+   ***Well, we have configured our DevTestLab in such a way that our VMs won't have public IP Address and won't be able to communicate other ways rather than using "Bastion". Bastion only provides access to Client VM (WC-52). There may be questions "How??". To answer this question, our three VNETs are peered to form a private network topology. We have setup Route Tables (RT-52) for our traffic to roam around our network topology and associated those route tables with our proper subnet of our VNETs in each VNETs (SN1). After that, we have to import our private key to "WC-52" in order to connect with our Linux Router (LR-52) and inside the Router VM (LR-52) to connect with Linux Server (LS-52). This is all but a basic connectivity that provides us with connection from WC-52 to LR-52 but not from WC-52 to LS-52 & WS-52 directly. The main Reason our Packets are not reaching from client to server is because linux router is not forwarding traffic to server side since this acts as a middle man!!***
+
+### Extra steps, configurations ans services required to get all machines connected to Windows Client
+  ***Since we established basic connectivity, we need to make our Server Accessible by our client VM. We know WC-LR and LR-WS/LS connections is good and these are the following steps I took to make our WC talk with our Server in Server-52 VNET.*** 
+  
+   i. Navigate to Networking Pane of LS-52> Clikc on "Network Interface" > Got to "IP configurations" > Enable IP forwarding.
+   
+   ii. I have also edited /etc/sysctl.conf and added `net.ipv4.ip_forward = 1` to allow our traffic through Router
