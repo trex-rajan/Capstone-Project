@@ -2,7 +2,7 @@
 
 # Checkpoint1 Resources
 Location="Canada East"
-RG_Name="Student-RG-????"
+RG_Name="Student-RG-734707"
 Sub_ID="e22a2bd0-d760-4866-9918-1c98f501eb6a"
 Student_vnet="Student-734707-vnet"
 Router_vnet="Router-52"
