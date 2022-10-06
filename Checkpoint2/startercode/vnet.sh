@@ -111,14 +111,14 @@ elif [[ "$command" == "CREATE" ]]; then
 #VNET Creation
 echo "----------------------"
 echo "Running Next ---------"
-echo "az deployment group create --resource-group $RG_Name --template-file ./Router/template.json"
-az deployment group create --resource-group $RG_Name --template-file ./Router/template.json 
+echo "az deployment group create --resource-group $RG_Name --template-file ./router_template/router_template.json"
+az deployment group create --resource-group $RG_Name --template-file ./router_template/router_template.json 
 echo "Completed ------------"
 
 echo "----------------------"
 echo "Running Next ---------"
-echo "az deployment group create --resource-group $RG_Name --template-file ./Server/template.json"
-az deployment group create --resource-group $RG_Name --template-file ./Server/template.json
+echo "az deployment group create --resource-group $RG_Name --template-file ./server_template/server_template.json"
+az deployment group create --resource-group $RG_Name --template-file ./server_template/server_template.json
 echo "Completed ------------"
 
 ######################################
