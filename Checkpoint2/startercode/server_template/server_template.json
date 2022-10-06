@@ -64,6 +64,15 @@
                         }
                     },
                     {
+                        "name": "AzureBastionSubnet",
+                        "properties": {
+                            "addressPrefix": "172.17.52.192/26",
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Disabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
+                        }
+                    },
+                    {
                         "name": "SN1",
                         "properties": {
                             "addressPrefix": "172.17.52.32/27",
@@ -97,6 +106,20 @@
                     }
                 ],
                 "enableDdosProtection": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('virtualNetworks_Server_52_name'), '/AzureBastionSubnet')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_Server_52_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "172.17.52.192/26",
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
             }
         },
         {
