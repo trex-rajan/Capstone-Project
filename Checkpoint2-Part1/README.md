@@ -11,9 +11,11 @@
 - **ASSIGNMENT REF: Checkpoint2-Part1-Report**
 
 ## Table of Contents:
-
-
-
+- [Table of Contents:](#table-of-contents)
+- [List of VMs in Cloud Lab](#list-of-vms-in-cloud-lab)
+- [List of images in Cloud Lab](#list-of-images-in-cloud-lab)
+- [Working Tree](#working-tree)
+- [Output of iptables -nvL](#output-of-iptables--nvl)
 
 ## List of VMs in Cloud Lab
 
