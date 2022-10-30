@@ -7,6 +7,11 @@
 
 ## TABLE OF CONTENTS
 
+- [TABLE OF CONTENTS](#table-of-contents)
+- [Output of ` git remote -v `](#output-of-git-remote--v)
+- [Output of ` git branch -l `](#output-of-git-branch--l)
+- [Output of ` git log -n `](#output-of-git-log--n)
+
 
 ## Output of ` git remote -v `
 
