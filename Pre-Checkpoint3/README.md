@@ -12,6 +12,7 @@
 - [Screenshot of iptables from router](#screenshot-of-iptables-from-router)
 - [Iptables for linux Server VM](#iptables-for-linux-server-vm)
 - [Screenshot of iptables from Linux server](#screenshot-of-iptables-from-linux-server)
+- [Conclusion](#conclusion)
 
 
 ## Iptables of Linux router
@@ -94,3 +95,7 @@ CP3_ls_firewalls.sh
 
 ## Screenshot of iptables from Linux server
 ![Screenshot of iptables from  the server not available](./screenshot%20of%20iptables%20-%20server.jpg "iptables from the server")
+
+
+## Conclusion
+- This lab taught me how to create iptables rule to control the different types of traffic between clients and server. We can implement the same type of configuration while working for different companies in the future. It is also a method of securing our servers from unncessary traffic that can lead to different security threats like DDos.
