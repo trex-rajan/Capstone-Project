@@ -7,10 +7,14 @@
 
 ## TABLE OF CONTENTS
 
+- [TABLE OF CONTENTS](#table-of-contents)
+- [Iptables of Linux router](#iptables-of-linux-router)
+- [Screenshot of iptables from router](#screenshot-of-iptables-from-router)
+- [Iptables for linux Server VM](#iptables-for-linux-server-vm)
+- [Screenshot of iptables from Linux server](#screenshot-of-iptables-from-linux-server)
 
 
-
-## Iptables of my router
+## Iptables of Linux router
 
 - This is the following iptales configured for the router. The main purpose of iptables in this router is to forward the traffic to servers (windows and client). We have rules to allow different kind of traffci (i.e. tcp, udp, mysql, ssh, https, http, etc.)
 
