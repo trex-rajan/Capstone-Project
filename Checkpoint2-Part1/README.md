@@ -1,13 +1,4 @@
 - **COURSE INFORMATION: CSN400**
-
-- **Student's Name: Keshav Raj Ghimire**
-
-- **STUDENT'S NUMBER: 162575195**
-
-- **GITHUB USER_ID: myseneca-62575195**
-
-- **TEACHER’S NAME: Atoosa Nasiri**
-
 - **ASSIGNMENT REF: Checkpoint2-Part1-Report**
 
 ## Table of Contents:
