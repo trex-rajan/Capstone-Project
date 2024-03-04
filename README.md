@@ -3,4 +3,4 @@
 
 ### Network Topology
 
-![Network Topology image not found.](./Pre-Checkpoint1/checkpoint1-diagram.png)
+![Network Topology image not found.](./checkpoint1-diagram.png)
